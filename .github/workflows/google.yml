@@ -44,9 +44,9 @@ env:
   GKE_CLUSTER: 'fastapi-k8s-test' # TODO: update to your cluster name
   GKE_ZONE: 'us-central1-a' # TODO: update to your cluster zone
   DEPLOYMENT_NAME: 'gke-test' # TODO: update to your deployment name
-  REPOSITORY: 'samples' # TODO: update to your Artifact Registry docker repository name
-  IMAGE: 'static-site'
-  WORKLOAD_IDENTITY_PROVIDER: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider' # TODO: update to your workload identity provider
+  REPOSITORY: 'fastapi-k8s' # TODO: update to your Artifact Registry docker repository name
+  IMAGE: 'translation-mlops'
+  WORKLOAD_IDENTITY_PROVIDER: 'projects/189617079959/locations/global/workloadIdentityPools/github/providers/fastapi-k8s' # TODO: update to your workload identity provider
 
 jobs:
   setup-build-publish-deploy:
