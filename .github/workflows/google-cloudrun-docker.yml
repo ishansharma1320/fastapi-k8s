@@ -38,6 +38,7 @@ env:
   PROJECT_ID: 'ai-confidant-app' # TODO: update to your Google Cloud project ID
   REGION: 'us-central1' # TODO: update to your region
   SERVICE: 'fastapi-k8s/translate' # TODO: update to your service name
+  GCR_SERVICE: 'fastapi-k8s-translate'
   WORKLOAD_IDENTITY_PROVIDER: 'projects/189617079959/locations/global/workloadIdentityPools/github/providers/fastapi-k8s' # TODO: update to your workload identity provider
 
 jobs:
@@ -84,7 +85,7 @@ jobs:
 
         uses: 'google-github-actions/deploy-cloudrun@33553064113a37d688aa6937bacbdc481580be17' # google-github-actions/deploy-cloudrun@v2
         with:
-          service: '${{ env.SERVICE }}'
+          service: '${{ env.GCR_SERVICE }}'
           region: '${{ env.REGION }}'
           project_id: '${{ env.PROJECT_ID }}'
           # NOTE: If using a pre-built image, update the image name below:
