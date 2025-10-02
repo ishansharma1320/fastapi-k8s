@@ -35,7 +35,7 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_ID: '189617079959' # TODO: update to your Google Cloud project ID
+  PROJECT_ID: 'ai-confidant-app' # TODO: update to your Google Cloud project ID
   REGION: 'us-central1' # TODO: update to your region
   SERVICE: 'fastapi-k8s' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: 'projects/189617079959/locations/global/workloadIdentityPools/github/providers/fastapi-k8s' # TODO: update to your workload identity provider
