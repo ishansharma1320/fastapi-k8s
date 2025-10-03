@@ -5,7 +5,6 @@ from inference_translate import translate
 import os, uvicorn, traceback
 
 load_dotenv()
-os.environ["HF_TOKEN"]="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"
 MODEL_NAME = os.getenv("MODEL_NAME", "Helsinki-NLP/opus-mt-en-hi")
 model = MarianMTModel.from_pretrained(MODEL_NAME)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
